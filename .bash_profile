@@ -38,19 +38,22 @@ alias _loadDB="sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysq
 alias preview="/usr/bin/open -a /Applications/Preview.app"
 alias webpackinit="perl ~/Developer/CustomScripts/webpackInit.pl"
 alias nrw="npm run webpack"
-alias set-web-dev="perl /Users/cotyembry/Developer/web-dev/set-web-dev.pl > /Users/cotyembry/Developer/web-dev/web-dev-config.txt"
-#alias web-dev="/Users/cotyembry/Developer/web-dev/web-dev.pl"
-#alias web-dev="cdPerlHelper"
+alias set-native-dev="perl /Users/cotyembry/Developer/CustomProjects/native-dev/set-native-dev.pl > /Users/cotyembry/Developer/CustomProjects/native-dev/native-dev-config.txt"
 alias reloadbashprofile="source ~/.bash_profile"
 
 #function definitions
 #sayHello() { echo "hello! $1"; } #referencing first argument example
 
 #first set the project directory when in the path of the root of the project when in the terminal by running set-web-dev
-alias set-web-dev="perl /Users/cotyembry/Developer/web-dev/set-web-dev.pl > /Users/cotyembry/Developer/web-dev/web-dev-config.txt"
+alias set-web-dev="perl /Users/cotyembry/Developer/CustomProjects/web-dev/set-web-dev.pl > /Users/cotyembry/Developer/CustomProjects/web-dev/web-dev-config.txt"
 #then later when ready to pull up the web development project type web-dev
-web-dev() { eval $(/Users/cotyembry/Developer/web-dev/web-dev.pl);  }
+web-dev() { eval $(/Users/cotyembry/Developer/CustomProjects/web-dev/web-dev.pl);  }
 
+
+alias set-native-dev="perl /Users/cotyembry/Developer/CustomProjects/native-dev/set-native-dev.pl > /Users/cotyembry/Developer/CustomProjects/native-dev/native-dev-config.txt"
+native-dev() { eval $(/Users/cotyembry/Developer/CustomProjects/native-dev/native-dev.pl); }
 
 export NVM_DIR="/Users/cotyembry/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
